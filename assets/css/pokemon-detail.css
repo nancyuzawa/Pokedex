@@ -6,6 +6,10 @@ li{
     list-style: none;
 }
 
+.poke{
+    position: relative;
+}
+
 .poke-type{
     display: flex;
     flex-direction: row;
@@ -28,6 +32,19 @@ li{
   margin-right: .5rem;
 
 }
+ .content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../pokeball.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 10.5rem 12rem;
+    opacity: 0.2;
+} 
 .poke-number{
     display: flex;
     flex-direction: row;
@@ -35,10 +52,12 @@ li{
     font-weight: bolder;
 }
 .poke-name{
+    margin-top: .9rem;
     margin-bottom: -.30rem;
 }
 
 .poke-image{
+    position: relative;
     max-width: 100%;
     height: 150px;
     margin-top: 3.5em;
@@ -54,9 +73,7 @@ li{
     border: 0;
     background-color: #fff;
     width: 100vw;
-    /* height: auto; */
     border-radius: 1.5rem 1.5rem 0 0;
-
 }
 
 h2{
@@ -67,7 +84,6 @@ h2{
 
 p{
     font-size: .8rem;
-    /* margin: .5rem; */
 }
 
 .div-information-about{
@@ -80,6 +96,12 @@ p{
 
 .information-text{
     opacity: .7;
+}
+
+#icon-arrow{
+    width: 1rem;
+    height: auto;
+    margin-top: 2rem;
 }
 @media screen and (min-width: 375px){
     .pokemon::before{

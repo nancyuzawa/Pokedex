@@ -5,30 +5,55 @@ const maxRecords = 151
 const limit = 50
 let offset = 0
 
+function save(){
+  window.localStorage.setItem('campo1', $('#campo1').val());
+}
 
-function loadPokemonItens(offset, limit){
-  pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-    const newHtml = pokemons.map((pokemon) => `
-    <a class="detail-page" href="./assets/pokemon-details.html">
-        <li class="pokemon ${pokemon.type}">
+function convertPokemonToLi(pokemon) {
+  return `
+    <a class="detail-page" href="./assets/pokemon-details.html" data-pokemon-number="${pokemon.number}" >
+      <li class="pokemon ${pokemon.type}">
           <span class="number">#${pokemon.number}</span>
           <span class="name">${pokemon.name}</span>
-    
           <div class="detail">
-            <ol class="types">
-              ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-            </ol>
-            <img src="${pokemon.photo}" 
-              alt="${pokemon.name}">
+              <ol class="types">
+                  ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+              </ol>
+              <img src="${pokemon.photo}" alt="${pokemon.name}">
           </div>
-        </li>
-      </a>
-    `).join('')
-    //pokemonList.innerHTML = newHtml  -> ao invés de substituir quero que ele concatene portanto:
-    pokemonList.innerHTML += newHtml
-  })
+      </li>
+    </a>
+  `
 }
-loadPokemonItens(offset, limit)
+
+function loadPokemonItens(offset, limit) {
+  pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+      const newHtml = pokemons.map(convertPokemonToLi).join('')
+      pokemonList.innerHTML += newHtml
+
+      //Associando eventos de clique às âncoras após serem adicionadas ao DOM7
+      document.querySelectorAll('.detail-page').forEach(anchor => {
+        anchor.addEventListener('click', function(event){
+
+          //Faz com que a página não vá para a outra
+          // event.preventDefault();
+
+          // Salvando o pokemonNumber no localStorage
+          const pokemonNumber = this.dataset.pokemonNumber
+           // Redirecionando para a página de detalhes do Pokémon
+          localStorage.setItem('pokemonNumber', pokemonNumber)
+          console.log('Id pokemon: ', pokemonNumber)      
+          window.location.href = `./assets/pokemon-details.html`  
+        })
+      })
+    })
+  }
+  
+  //Chama somente após o DOM ter sido completamente carregado,
+  // evitando possíveis erros ao tentar acessar elementos do DOM que ainda não foram carregados.
+  document.addEventListener('DOMContentLoaded', function(){
+    loadPokemonItens(offset, limit);
+  })
 
 
 //Quando clicar no botão
@@ -47,3 +72,5 @@ loadPokemonItens(offset, limit)
     loadPokemonItens(offset, limit)
   }
 })*/
+
+

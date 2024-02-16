@@ -4,23 +4,24 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #f6f8fC;
 }
 
-.content{
+.content {
   width: 100vw;
-  height: 100vh;  /*tamanho da tela inteira*/
-  /* Ele se baseia na fonte da pessoa, então é flexível*/
-  padding: 1rem;  
+  height: 100vh; /* tamanho da tela inteira */
+  /* Ele se baseia na fonte da pessoa, então é flexível */
+  padding: 1rem;
   background-color: #fff;
 }
 
-@media screen and (min-width: 992px){
-  .content{
+@media screen and (min-width: 992px) {
+  .content {
     max-width: 992px;
     height: auto;
     margin: 1rem auto;
     border-radius: 1rem;
   }
 }
+

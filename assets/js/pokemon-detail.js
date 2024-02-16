@@ -1,47 +1,8 @@
 const pokemonDetail = document.getElementById('pokemonDetail')
-
-function convertPokeApiDetailToPokemon(pokeDetail) {
-    const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.id
-    pokemon.name = pokeDetail.name
-    
-    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
-  
-    // Isso quer dizer que este é o primeiro elemento do array
-    const [type] = types
-  
-    pokemon.types = types
-    pokemon.type = type
-  
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
-
-    pokemon.height = pokeDetail.height
-    pokemon.weight = pokeDetail.weight
-
-    const abilities = pokeDetail.abilities.map((typeSlot) => typeSlot.ability.name)
-
-    const [ability] = abilities
-    pokemon.abilities = abilities
-    pokemon.ability = ability
-    
-    const stats = pokeDetail.stats.map((typeSlot) => typeSlot.base_stat)
-
-    const [base_stat] = stats
-    pokemon.stats = stats
-    pokemon.base_stat = base_stat
-
-    const statsName = pokeDetail.stats.map((typeSlot) => typeSlot.stat.name)
-
-    const[stat] = statsName
-    pokemon.statsName = statsName
-    pokemon.stat = stat
-
-  
-    return pokemon
-}
+let isLike = false
 
 document.addEventListener('DOMContentLoaded', function() {
-    const savedPokemonNumber = localStorage.getItem('pokemonNumber');
+    const savedPokemonNumber = localStorage.getItem('pokemonNumber')
     console.log('Número do Pokémon salvo:', savedPokemonNumber);
 
     if (savedPokemonNumber) {
@@ -59,53 +20,103 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function adicionandoNoHtml(pokemon) {
+    // Chama a função para formatar o número
+    const formattedNumber = formattedNumberPokemon(pokemon.number)
     const newHtml = `
-        <a href="../index.html">
-            <img id="icon-arrow" src="../arrow-left.png" alt="">
-        </a>
+    <section class="${pokemon.type} content sectionPoke">
+        <div id="firstPart">
+            <div class="icones">
+                <a href="../index.html">
+                    <img id="iconArrow" src="../assets/image/left-arrow.png" alt="return">
+                </a>
+                <button onclick="exchangeHeart()" class="heartButton">
+                    <img class="icone" src="../assets/image/heart.png" alt="like">
+                </button>
+            </div>
 
-        <div class="poke">
-            <h1 class="poke-name">${pokemon.name}</h1>
-            <span class="poke-number">#${pokemon.number}</span>
-            <div class="type">
-                <ol class="poke-type">
-                    ${pokemon.types.map((type) => `<li class="li-type ${type}">${type}</li>`).join('')}
-                </ol>
-            </div>
-        </div>
-        <div class="div-image">
-            <img class="poke-image" src="${pokemon.photo}" alt="${pokemon.name}">
-        </div>
-        <div class="poke-information">
-            <h2>About</h2>
-            <div class="div-information-about">
-                <div class="div-information-about-description">
-                    <p class="information-text">Weight</p>
-                    <p class="information-text">Height</p>
-                    <p class="information-text">Abilities</p>
-                </div>
-                <div>
-                    <p>${pokemon.weight}</p>
-                    <p>${pokemon.height}</p>
-                    <p>
-                        ${pokemon.abilities.map((ability) => `${ability}`).join(', ')}
-                    </p>
+            <div class="poke">
+                <h1 class="pokeName">${pokemon.name}</h1>
+                <span class="pokeNumber">#${formattedNumber}</span>
+                <div class="type">
+                    <ol class="pokeType">
+                        ${pokemon.types.map((type) => `<li class="liType ${pokemon.type}">${type}</li>`).join('')}
+                    </ol>
                 </div>
             </div>
-            <h2>Base States</h2>
-            <div class="div-information-about">
-                <div class="div-information-about-description">
-                    <p>${pokemon.statsName.map((stat) => `${stat}`).join('</br><p>')}</p>
-                <p class="information-text">Total</p>
+            <div class="divImage">
+                <img class="pokeImage" src="${pokemon.photo}" alt="${pokemon.name}">
+            </div>
+        </div>
+
+        <div id="secondParty">
+            <div class="pokeInformation">
+                <h2>About</h2>
+                <div class="divInformationAbout">
+                    <div class="divInformationAboutDescription">
+                        <p class="informationText">Weight</p>
+                        <p class="informationText">Height</p>
+                        <p class="informationText">Abilities</p>
+                    </div>
+                    <div>
+                        <p>${pokemon.weight}</p>
+                        <p>${pokemon.height}</p>
+                        <p>
+                            ${pokemon.abilities.map((ability) => `${ability}`).join(', ')}
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <p>${pokemon.stats.map((base_stat) => `${base_stat}`).join('</br><p>')}</p>
-                    <p>
-                    ${pokemon.stats.reduce((acumulator, currentValue) => acumulator + currentValue)}
-                    </p>
+                <h2>Base States</h2>
+                <div class="divInformationAbout">
+                    <div class="divInformationAboutDescription">
+                        <p class="informationText" >${pokemon.statsName.map((stat) => `${stat}`).join('</br><p class="informationText">')}</p>
+                    <p class="informationTextTotal">Total</p>
+                    </div>
+                    <div>
+                        <p>${pokemon.stats.map((base_stat) => `${base_stat}`).join('</br><p>')}</p>
+                        <p class="informationTextTotal">
+                        ${pokemon.stats.reduce((acumulator, currentValue) => acumulator + currentValue)}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    `;
-    pokemonDetail.innerHTML = newHtml;
+        <footer>
+            <span class="credit" >&copy; 2024. Todos os direitos reservados </span>
+            <span class="credit" >Desenvolvido por Nancy Yuzawa</span>
+        </footer>
+    </section>
+    `
+
+    pokemonDetail.innerHTML += newHtml
+
+    // Seleciona todos os elementos de texto no documento
+    const textElements = pokemonDetail.querySelectorAll('*:not(script):not(style)');
+
+    // Itera sobre cada elemento de texto
+    textElements.forEach(element => {
+        // Verifica se o texto do elemento contém a palavra 'hp'
+        if (element.textContent.includes('hp')) {
+            // Modifica o texto para tornar 'hp' em maiúsculo
+            element.innerHTML = element.innerHTML.replace(/hp/g, '<span class="uppercase">HP</span>');
+        }
+    });
+}
+
+function exchangeHeart(){
+    if(isLike == false){
+        const filledHeart = document.querySelector('.heartButton')
+            filledHeart.innerHTML = filledHeart.innerHTML.replace(
+                '<img class="icone" src="../assets/image/heart.png" alt="like">',
+                '<img class="icone" src="../assets/image/filled-heart.png" alt="like">'
+            )
+        isLike = true
+    }
+    else{
+        const filledHeart = document.querySelector('.heartButton')
+            filledHeart.innerHTML = filledHeart.innerHTML.replace(
+                '<img class="icone" src="../assets/image/filled-heart.png" alt="like">',
+                '<img class="icone" src="../assets/image/heart.png" alt="like">'
+            )
+        isLike = false
+    }
 }

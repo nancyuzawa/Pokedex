@@ -9,7 +9,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   
   const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
 
-  //isso quer diser que esse é a primeira posição de um array
+  // Isso quer dizer que este é o primeiro elemento do array
   const [type] = types
 
   pokemon.types = types
@@ -17,9 +17,29 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
+  pokemon.height = pokeDetail.height
+  pokemon.weight = pokeDetail.weight
+
+  const abilities = pokeDetail.abilities.map((typeSlot) => typeSlot.ability.name)
+
+  const [ability] = abilities
+  pokemon.abilities = abilities
+  pokemon.ability = ability
+  
+  const stats = pokeDetail.stats.map((typeSlot) => typeSlot.base_stat)
+
+  const [base_stat] = stats
+  pokemon.stats = stats
+  pokemon.base_stat = base_stat
+
+  const statsName = pokeDetail.stats.map((typeSlot) => typeSlot.stat.name)
+
+  const[stat] = statsName
+  pokemon.statsName = statsName
+  pokemon.stat = stat
+  
   return pokemon
 }
-
 
 pokeApi.getPokemonDetail = (pokemon) =>{
   console.log(pokemon)

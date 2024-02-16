@@ -12,5 +12,4 @@ class Pokemon{
     stats = [];
     statsName = [];
     stat;
-
 }

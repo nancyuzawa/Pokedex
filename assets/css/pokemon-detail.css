@@ -1,136 +1,286 @@
-.background-body .fire{
-    padding: 1rem;  
+.backgroundBody .sectionPoke :not(.credit){
+  text-transform: capitalize;
 }
 
-li{
-    list-style: none;
+.backgroundBody .sectionPoke span {
+  text-transform: none; /* Anula a transformação de texto */
 }
 
-.poke{
-    position: relative;
+.type{
+  filter: brightness(1.15);
 }
 
-.poke-type{
-    display: flex;
-    flex-direction: row;
-    margin: -.5rem 0 0 0;
-    padding: 0;
+.pokeType{
+  display: flex;
+  margin: -.5rem 0 0 0;
+  padding: 0;
+
 }
 
-.li-type{
-    /* background-color: ; */
-    /* margin: 0 1rem; */
-    /* -right: 5rem; */
-    background-color: yellowgreen;
+.pokeNumber{
+  display: flex;
+  justify-content: end;
+  font-weight: bolder;
+  color: #fff;
+}
 
-    color: #fff;
-  padding: .30rem 1rem;
-  /* margin: .25rem 0; */
+.pokeName{
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: -.30rem;
+}
+
+.liType{
+  color: #fff;
   font-size: .625rem;
   border-radius: 1rem;
-  /* filter: brightness(1.1); */
-  margin-right: .5rem;
-
-}
- .content::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../../pokeball.png');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 10.5rem 12rem;
-    opacity: 0.2;
-} 
-.poke-number{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    font-weight: bolder;
-}
-.poke-name{
-    margin-top: .9rem;
-    margin-bottom: -.30rem;
+  padding: .35rem 1rem;
+  margin-right: .3rem;
+  list-style: none; 
+  align-items: center;
 }
 
-.poke-image{
-    position: relative;
-    max-width: 100%;
-    height: 150px;
-    margin-top: 3.5em;
+.pokeImage{
+  position: relative;
+  max-width: 100%;
+  height: 150px;
+  margin-top: 3.5em;
+  z-index: 1;
 }
 
-.div-image{
-    text-align: center;
+.divImage{
+  text-align: center;
 }
 
-.poke-information{
-    padding: 1rem 0 3rem 1rem;
-    margin:  -1.5rem 0 0 -1rem;
-    border: 0;
-    background-color: #fff;
-    width: 100vw;
-    border-radius: 1.5rem 1.5rem 0 0;
+.pokeInformation{
+  padding: 1rem 0 3rem 1rem;
+  margin:  -1.5rem 0 0 -1rem;
+  border: 0;
+  background-color: #fff;
+  width: 100vw;
+  border-radius: 1.5rem;
 }
 
 h2{
-    font-size: .9rem;
-    font-weight: bolder;
-    margin: 1rem 0 .5rem 0;
+  font-size: .9rem;
+  font-weight: bolder;
+  margin: 1rem 0 .5rem 0;
 }
 
 p{
-    font-size: .8rem;
+  font-size: .8rem;
 }
 
-.div-information-about{
-    display: flex;
-    flex-direction: row;
-}
-.div-information-about-description{
-    padding-right: 3.5rem;
+.divInformationAbout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.information-text{
-    opacity: .7;
+.divInformationAboutDescription{
+  padding-right: 3.5rem;
 }
 
-#icon-arrow{
-    width: 1rem;
-    height: auto;
-    margin-top: 2rem;
+.informationText{
+  opacity: .7;
 }
+
+.informationTextTotal{
+  margin-top: 1rem;
+  color: rgb(206, 0, 0);
+  font-weight: bolder;
+}
+
+#iconArrow, .icone{
+  width: 1rem;
+  height: auto;
+  border-top: 2rem;
+}
+
+.heartButton{
+  padding: 0;
+}
+
+.icones{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heartButton{
+  background-color: transparent;
+  border: none;
+}
+
+.content::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../image/pokeball.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 10.5rem 10.5rem;
+  opacity: 0.2;
+} 
+
+.sectionPoke::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../image/marbles.png');
+  background-repeat: no-repeat;
+  background-size:20%;
+  background-position: 2rem 11.8rem;
+  opacity: 0.2;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  top: 0;
+  border: .5rem 0;
+}
+
+.credit{
+  color: black;
+  font-size: .5rem;
+  margin-top: .2rem;
+}
+
 @media screen and (min-width: 375px){
-    .pokemon::before{
-      background-position: 13rem 2rem;
-    }
+  .content::before{
+    background-position: 13.5rem 12.5rem;
   }
-  
-  @media screen and (min-width: 380px){
-    .pokemons {
-      grid-template-columns: 1fr 1fr;
-    }
-    .pokemon::before{
-      background-position: 5.5rem 2.9rem;
-      background-size: 55%;
-    }
+  .sectionPoke::after{
+    background-position: 2rem 13.0rem;
   }
-  
-  @media screen and (min-width: 576px){
-    .pokemons {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .pokemon::before{
-      background-position: 6.5rem 2rem;
-      /* background-size: 55%; */
-    }
+  #iconArrow, .icone{
+    width: 1.3rem;
   }
-  
-  @media screen and (min-width: 992px){
-    .pokemons {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  .icones{
+    padding-top: 1rem;
   }
+  .liType{
+    font-size: .75rem;
+  }
+}
+
+@media screen and (min-width: 768px){
+  section{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  body {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+  }
+  #firstPart{
+    width: 21rem;
+    margin-right: 2rem;
+  }
+  .sectionPoke::after{
+    background-size:15%;
+    background-position: 4rem 11.8rem;
+  }
+  .content::before{
+    background-size: 30%;
+    background-position: 14.5rem 14.5rem;
+  } 
+  .icones{
+    margin-top: -3.5rem;
+  }
+  #iconArrow, .icone{
+    width: 2rem;
+  }
+  .divInformationAboutDescription{
+    padding-right: 0;
+  }
+  .pokeInformation{
+    border-radius: 1.5rem;
+    width: 23rem;
+    padding: 1rem 0 1rem 1rem;
+    margin: 0;
+  }
+  h2{
+    font-size: 1rem;
+  }
+  p{
+    font-size: .9rem;
+  }
+  .pokeType{
+    margin: -.2rem 0 0 0;
+  }
+  .pokeNumber{
+    font-size: 1.1rem;
+  }
+  .liType{
+    font-size: .8rem;
+    padding: .4rem 1.5rem;
+  }
+  .pokeImage{
+    height: 200px;
+  }
+  section{
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    margin: 0; /* Remove margens padrão */
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  } 
+  .credit {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  section{
+    display: flex;
+    justify-content: space-around;
+  }
+  .sectionPoke::after{
+    background-size:11%;
+    background-position: 15rem 15.8rem;
+  }
+  .content::before{
+    background-size: 20%;
+    background-position: 29.5rem 21.5rem;
+  } 
+  #firstPart{
+    width: 22rem;
+    padding: 5rem 0 1rem 0;
+    margin-left: 5rem;
+  }
+  .pokeInformation{
+    width: 25rem;
+    height: 32rem;
+  }
+  .backgroundBody .sectionPoke{
+    height: 35rem;
+  }
+  .icones{
+    margin-top: -10rem;
+  }
+  footer {
+    padding: .3rem 0;
+  } 
+}

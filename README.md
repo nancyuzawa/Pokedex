@@ -67,7 +67,7 @@
 <h2 id="preRequisitos">
 	Pré-requisitos
 </h2>
- Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: <a scr="https://git-scm.com">Git</a>, <a scr="https://nodejs.org/en/">Node.js</a> e um editor de código, como o <a scr="https://code.visualstudio.com">VSCode</a>
+ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: <a href="https://git-scm.com">Git</a>, <a href="https://nodejs.org/en/">Node.js</a> e um editor de código, como o <a href="https://code.visualstudio.com">VSCode</a>
 <h2 id="tecnologias">
 	Tecnologias
 </h2>
@@ -85,7 +85,7 @@
 		Node.js
 	</li>
 	<li>
-		Json da <a scr="https://pokeapi.co">Poké API</a>
+		Json da <a href="https://pokeapi.co">Poké API</a>
 	</li>
 </ul>
 
@@ -94,13 +94,13 @@
 </h2>
 <ul>
 	<li>
-		Design do Pokedex para mobile: <a scr="https://dribbble.com/shots/6540871-Pokedex-App">Saepul Nahwan</a>
+		Design do Pokedex para mobile: <a href="https://dribbble.com/shots/6540871-Pokedex-App">Saepul Nahwan</a>
 	</li>
 	<li>
-		API usada: <a scr="https://pokeapi.co">Poké API</a>
+		API usada: <a href="https://pokeapi.co">Poké API</a>
 	</li>
 	<li>
-		Icones de Pokémon neste README: <a scr=" https://icons8.com.br/icons/set/pokedex">Icons8</a>
+		Icones de Pokémon neste README: <a href=" https://icons8.com.br/icons/set/pokedex">Icons8</a>
 	</li>
 </ul>
 
@@ -122,6 +122,6 @@
 	Feito com ❤️ por Nancy Yuzawa. 
 </p>
 <p align="center">
-	👋 <a scr="linkedin.com/in/nancy-yuzawa/">Entre em contato</a>
+	👋 <a href="https://www.linkedin.com/in/nancy-yuzawa">Entre em contato</a>
 </p>
 <div align = "center">🌿•₊✧💻⋆⭒˚☕️｡⋆</div>

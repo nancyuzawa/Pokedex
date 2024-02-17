@@ -103,7 +103,10 @@
 		Icones do Pokémon neste README: <a href=" https://icons8.com.br/icons/set/pokedex">Icons8</a>
 	</li>
 </ul>
-<p align="center"> ₊˚⊹⋆  <img align="center" src="./github/icons8-indayo-48.png" alt="snorlax-icon"/>  ⋆⊹˚₊</p>
+
+<p align="center">
+	<b>─── ⋆⋅<img align="center" width="48" height="48" src="./github/icons8-indayo-48.png" alt="snorlax-icon"/>⋅⋆ ───</b>
+</p>
 
 <h2 align="center" id="licenca">
 	Licença

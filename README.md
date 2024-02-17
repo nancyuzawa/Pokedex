@@ -1,8 +1,5 @@
-
-
-
 <h1>
-	<img align="center" width="30" height="30" src="https://img.icons8.com/color/48/pokedex.png" alt="pokedex"/>
+	<img align="center" width="30" height="30" src="./github/icons8-pokedex-48 (1).png" alt="pokedex"/>
 	Pokedex
 </h1>
 <p align="center">
@@ -12,7 +9,7 @@
 <h4 align="center"> 🚧 Pokedex 🚀 Concluído ✔️ 🚧</h4></p>
 <p align="center">
 
-![pokedex-banner (2)](https://github.com/nancyuzawa/Pokedex/assets/110066948/d196e68e-5ecc-4e78-ac26-e53575685a40)
+<img align="center" src="./github/pokedex-banner.png" alt="benner"/>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/nancyuzawa/Pokedex?color=%2304D361">
@@ -22,10 +19,14 @@
 
 
 <p align="center">  
-	<a href="#Sobre">Sobre</a> • <a href="#roadmap">Roadmap</a> • <a href="#tecnologias">Tecnologias</a> • <a href="#contribuicao">Contribuição</a> • <a href="#licenc-a">Licença</a> • <a href="#autor">Autor</a>
+	<a href="#sobre">Sobre</a> • <a href="#demo">Demonstração da aplicação</a> • <a href="#preRequisitos">Pré-requisitos</a> • <a href="#tecnologias">Tecnologias</a> • <a href="#creditos">Creditos</a> • <a href="#licenca">Licença</a> 
 </p>
 
-<h2 id="Sobre">
+<p align="center">
+	<b>─── ⋆⋅<img align="center" width="48" height="48" src="./github/icons8-família-de-meowth-48.png" alt="meowth"/>⋅⋆ ───</b>
+</p>
+
+<h2 id="sobre">
 	Sobre o projeto
 </h2>
 <p>
@@ -48,13 +49,76 @@
 		</li>
 	</ul>
 </p>
+<h2 id="demo">
+	Demonstração da aplicação
+	<h3>
+		Mobile
+		<p align="center">
+			<img src="./github/MobileDemonstration.gif" alt="MobileDemonstration"/>
+		</p>
+		Web
+		<p align="center">
+			<img src="./github/WebDemonstration1.png" alt="WebDemonstration1"/>
+   		 	<img src="./github/WebDemonstration2.png" alt="WebDemonstration2"/>
+		</p>
+	</h3>
+	
+</h2>
+<h2 id="preRequisitos">
+	Pré-requisitos
+</h2>
+ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: <a href="https://git-scm.com">Git</a>, <a href="https://nodejs.org/en/">Node.js</a> e um editor de código, como o <a href="https://code.visualstudio.com">VSCode</a>
+<h2 id="tecnologias">
+	Tecnologias
+</h2>
+<ul>
+	<li>
+		HTML5
+	</li>
+	<li>
+		CSS3
+	</li>
+	<li>
+		JavaScript
+	</li>
+	<li>
+		Node.js
+	</li>
+	<li>
+		Json da <a href="https://pokeapi.co">Poké API</a>
+	</li>
+</ul>
+
+<h2 id="creditos">
+	Créditos
+</h2>
+<ul>
+	<li>
+		Design do Pokedex para mobile: <a href="https://dribbble.com/shots/6540871-Pokedex-App">Saepul Nahwan</a>
+	</li>
+	<li>
+		API usada: <a href="https://pokeapi.co">Poké API</a>
+	</li>
+	<li>
+		Icones do Pokémon neste README: <a href=" https://icons8.com.br/icons/set/pokedex">Icons8</a>
+	</li>
+</ul>
+<p align="center"> ₊˚⊹⋆  <img align="center" src="./github/icons8-indayo-48.png" alt="snorlax-icon"/>  ⋆⊹˚₊</p>
+
+<h2 align="center" id="licenca">
+	Licença
+</h2>
+<p align="center">
+	Este projeto esta sobe a licença MIT.
+</p>
+
 
 
 
 <p align="center">
-	<b>
-		─── ⋆⋅
-		<img align="center" width="48" height="48" src="https://img.icons8.com/color/48/meowth.png" alt="meowth"/>
-		⋅⋆ 
-		───</b>
+	Feito com ❤️ por Nancy Yuzawa. 
 </p>
+<p align="center">
+	👋 <a href="linkedin.com/in/nancy-yuzawa/">Entre em contato</a>
+</p>
+<div align = "center">🌿•₊✧💻⋆⭒˚☕️｡⋆</div>

@@ -14,7 +14,9 @@
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/nancyuzawa/Pokedex?color=%2304D361">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/nancyuzawa/Pokedex">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/nancyuzawa/Pokedex?color=%2304D361">
+  <a href="https://github.com/tgmarinho/nlw1/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nancyuzawa/Pokedex">
+  </a>
 </p>
 
 
@@ -100,7 +102,7 @@
 		API usada: <a href="https://pokeapi.co">Poké API</a>
 	</li>
 	<li>
-		Icones de Pokémon neste README: <a href=" https://icons8.com.br/icons/set/pokedex">Icons8</a>
+		Icones de Pokémon neste README: <a href="https://icons8.com.br/icons/set/pokedex">Icons8</a>
 	</li>
 </ul>
 

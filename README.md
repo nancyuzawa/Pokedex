@@ -110,6 +110,30 @@
 	<b>─── ⋆⋅<img align="center" width="48" height="48" src="./github/icons8-indayo-48.png" alt="snorlax-icon"/>⋅⋆ ───</b>
 </p>
 
+## Pré-requisitos
+Antes de começar, verifique se você possui as seguintes ferramentas instaladas em sua máquina:
+
+* Git
+* Node.js (que inclui npm, o gerenciador de pacotes do Node.js)
+* Um editor de código, como Visual Studio Code
+
+
+### Clone o repositório usando o Git
+
+```bash
+git clone https://github.com/nancyuzawa/Pokedex.git
+```
+
+### Entre na pasta do projeto
+```bash
+cd Pokedex
+```
+## Estrutura do projeto
+* O projeto usa tecnologias como HTML5, CSS3, JavaScript e Node.js.
+* Os dados são obtidos da API Poké API (https://pokeapi.co), usando JSON para recuperar informações sobre Pokémon.
+* O projeto inclui demonstrações da aplicação para mobile e web, conforme mostrado nas imagens MobileDemonstration.gif, WebDemonstration1.png e WebDemonstration2.png.
+
+
 <h2 id="licenca">
 	Licença
 </h2>
